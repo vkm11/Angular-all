@@ -1,0 +1,47 @@
+
+/* app.component.css */
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .cards-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Optional for smooth scrolling */
+    width: 80%; /* Adjust width as necessary */
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    width: 200px; /* Width of each card */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .left {
+    left: 10px;
+  }
+  
+  .right {
+    right: 10px;
+  }
+  

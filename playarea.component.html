@@ -1,0 +1,30 @@
+<div *ngIf="loader">
+  <div class="d-flex align-items-center justify-content-center min-vh-100">
+    <p>loding...</p>
+  </div>
+</div>
+<div *ngIf="!loader">
+
+  <div class="row mx-0" [ngClass]="{'justify-content-center': !isSidebarOpen}">
+    <div class="col-sm-8 px-0" [ngClass]="{'col-sm-12': isSidebarOpen, 'col-sm-8': !isSidebarOpen}">
+      <div class="">
+        <p class="mb-0 py-0">Playarea works here</p>
+      </div>
+      <div class="card-container">
+        <button class="scroll-btn left" *ngIf="showLeftButton" (click)="scroll('left')">←</button>
+      
+        <div class="cards-wrapper" (scroll)="updateButtonVisibility()">
+          <div class="card" *ngFor="let card of cards">
+            <div class="card-content">
+              <h3>{{ card.title }}</h3>
+              <p>{{ card.description }}</p>
+            </div>
+          </div>
+        </div>
+      
+        <button class="scroll-btn right" *ngIf="showRightButton" (click)="scroll('right')">→</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
